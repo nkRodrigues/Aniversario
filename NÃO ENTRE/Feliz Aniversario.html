@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Aniversario</title>
+
+    <style>
+
+        h1{
+            color: red;
+           
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            padding: 20px;
+            
+        }
+        #mensagem{
+            display: none;
+            font-size: 24px;
+            margin-top: 20px;
+            color: #333;
+        }
+        video{
+            width: 100%;
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <h1>FELIZ ANIVERSARIO MEU AMOR, EU TE AMO DEMAIS </h1>
+
+    <video id="video" controls>
+        <source src="video/video.mp4"
+        type="video/mp4">
+            Seu navegador não suporta o video.
+    </video>
+    <div id="mensagem"> EU TE AMO MUITO</div>
+
+    <script>
+        const video = document.getElementById('video');
+        const mensagem = document.getElementById('mensagem');
+
+        video.addEventListener('ended', 
+            function() {
+                mensagem.style.display = 'block';
+
+            });
+    </script>
+</body>
+</html>
